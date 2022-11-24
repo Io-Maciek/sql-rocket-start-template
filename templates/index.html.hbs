@@ -1,0 +1,13 @@
+{{#*inline "page"}}
+    <h1>Users list</h1>
+    <hr>
+    {{#if users}}
+        {{#each users}}
+            <h3>{{this.ID}}: {{this.username}} {{this.password}}</h3>
+        {{/each}}
+    {{else}}
+        <h2>Is empty</h2>
+        <h5>Try going to adress <b>/add/&lt;username&gt;/&lt;password&gt; to add new user</b></h5>
+    {{/if}}
+{{/inline}}
+{{> layout}}

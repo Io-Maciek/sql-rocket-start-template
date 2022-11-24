@@ -1,0 +1,15 @@
+[package]
+name = "sql-rocket-start-template"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = "0.5.0-rc.2", features = ["secrets"] }
+rocket_dyn_templates={version = "0.1.0-rc.2", features = ["handlebars"]}
+serde = "1.0.130"
+rocket-include-static-resources = "0.10.3"
+rocket_db_pools = {version="0.1.0-rc.2", features= ["sqlx_sqlite"]}#, "sqlx_mssql"] }
+sqlx = "0.5.13"
+async-trait = "0.1.57"

@@ -32,7 +32,8 @@ fn rocket() -> Rocket<Build> {
 	let figment = rocket::Config::figment()
 		.merge(("address", "0.0.0.0"))
 		.merge(("databases.Database", rocket_db_pools::Config{
-			url: "Database.db".to_string(),
+			url: "Database.db".to_string(), 								//SQLITE
+			//url: "mssql://[user]:[pwd]@[ip][:port]/Database".to_string(), 	//MSSQL
 			min_connections: None,
 			max_connections: 1024,
 			connect_timeout: 5,

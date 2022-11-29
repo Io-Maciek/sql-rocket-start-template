@@ -3,11 +3,11 @@
     <hr>
     {{#if users}}
         {{#each users}}
-            <h3>{{this.ID}}: {{this.username}} {{this.password}}</h3>
+            <h3>{{this.id}}: {{this.username}} {{this.password}}</h3>
         {{/each}}
     {{else}}
         <h2>Is empty</h2>
-        <h5>Try going to adress <b>/add/&lt;username&gt;/&lt;password&gt; to add new user</b></h5>
+        <h5>Try going to address: <b>/add/&lt;username&gt;/&lt;password&gt; to add new user</b></h5>
     {{/if}}
 {{/inline}}
 {{> layout}}
